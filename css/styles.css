@@ -1,0 +1,181 @@
+/* --- GLOBAL VARIABLES & BASE STYLES --- */
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --primary-color: #0C405A;
+    --hover-color: #800000; /* Maroon red */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- STANDARD PAGE HEADERS (For Project Info Pages) --- */
+header:not(.about-section) {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+header:not(.about-section) h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* --- ABOUT ME SECTION (index.html) --- */
+header.about-section {
+    background-color: transparent; 
+    padding: 8rem 1rem 5rem 1rem; 
+    text-align: center;
+    max-width: 1000px; 
+    margin: 0 auto;
+}
+
+header.about-section h1 {
+    font-size: 4rem; 
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    letter-spacing: -1px; 
+}
+
+.bio-text {
+    font-size: 1.05rem; 
+    color: #444; 
+    line-height: 1.8;
+    margin-bottom: 1.5rem; 
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px); 
+}
+
+/* --- PORTFOLIO WIDE CARDS --- */
+.portfolio-container {
+    max-width: 1000px;
+    margin: 8rem auto 4rem auto; 
+    padding: 0 1rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 3rem; 
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.reverse {
+    flex-direction: row-reverse; 
+}
+
+.card-content {
+    flex: 1.5; 
+}
+
+.card-content h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.card-image-wrapper {
+    flex: 1;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 3px solid var(--primary-color); 
+    border-radius: 4px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.button-group .btn {
+    flex: 1;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* --- SECTION HEADERS --- */
+.section-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.project-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
