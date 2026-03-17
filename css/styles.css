@@ -75,6 +75,13 @@ header.about-section li {
     margin-bottom: 1.5rem; 
 }
 
+.hero-text {
+    font-size: 1.05rem; 
+    color: var(--primary-color); 
+    line-height: 1.8;
+    margin-bottom: 1.5rem; 
+}
+
 .coursework-intro {
     margin-bottom: 0.5rem; 
 }
