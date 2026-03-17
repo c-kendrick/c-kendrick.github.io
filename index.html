@@ -8,9 +8,25 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <nav id="navbar" class="sticky-nav">
+        <div class="nav-content">
+            <span class="nav-logo">Christopher Kendrick</span>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills & Expertise</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-socials" id="nav-socials">
+                <a href="https://github.com/c-kendrick" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="files/Christopher_Kendrick_Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume-btn">Resume</a>
+            </div>
+        </div>
+    </nav>
 
     <header class="about-section">
-        <div class="about-container">
+        <div id="about">
             <h1>CHRISTOPHER KENDRICK</h1>
             <h2 class="section-title">About Me</h2>
             <p class="bio-text">
@@ -40,7 +56,7 @@
         </div>
     </header>
 
-    <div class="portfolio-container">
+    <div id="portfolio">
         <h2 class="section-title">Portfolio</h2>
         <div class="card fade-in">
             <div class="card-content">
@@ -114,6 +130,37 @@
         </div>
 
     </div>
+
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-container">
+            <div class="skills-column fade-in">
+                <h3>Technical Skills</h3>
+                <ul class="skills-list">
+                    <li><strong>Languages:</strong> Java, C#, JavaScript, HTML, CSS</li>
+                    <li><strong>Architecture:</strong> Object-Oriented Design, Finite State Machines, Local State Management</li>
+                    <li><strong>Tools & Libraries:</strong> Git/GitHub, Unity, Chart.js, Jira</li>
+                    <li><strong>Core Concepts:</strong> Data Persistence, Vector Math, Algorithmic Logic, DOM Manipulation</li>
+                </ul>
+            </div>
+
+            <div class="skills-column fade-in">
+                <h3>Management & Strategy</h3>
+                <ul class="skills-list">
+                    <li><strong>Methodologies:</strong> Agile Development, Scrum Facilitation, Sprint Tracking</li>
+                    <li><strong>Leadership:</strong> Team Coordination, Conflict Resolution, High-Pressure Operations</li>
+                    <li><strong>Business Strategy:</strong> Cross-Functional Collaboration, Go-to-Market Business Planning</li>
+                    <li><strong>Project Scoping:</strong> Technical Documentation, Lifecycle Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="contact-footer fade-in">
+        <h2>Contact Me</h2>
+        <p>Currently seeking graduate and junior software engineering roles.</p>
+        <a href="mailto:ckendrick@post.com" class="btn contact-btn">Get in Touch</a>
+    </footer>
 
     <script src="javascript/script.js"></script>
 </body>

@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 150px;
+}
+
 /* --- GLOBAL VARIABLES & BASE STYLES --- */
 :root {
     --bg-color: #f4f4f9;
@@ -89,7 +94,7 @@ header.about-section li {
 }
 
 /* --- PORTFOLIO WIDE CARDS --- */
-.portfolio-container {
+#portfolio {
     max-width: 1000px;
     margin: 8rem auto 4rem auto; 
     padding: 0 1rem;
@@ -195,4 +200,210 @@ header.about-section li {
     background-color: var(--card-bg);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* The starting state: hidden and pushed down 30px */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform; 
+}
+
+/* The ending state: fully visible and in original position */
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Navigation Bar Styles --- */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f8f9fa; /* Match your page background */
+    padding: 1rem 0;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* The dynamic shadow class */
+.sticky-nav.scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: rgba(248, 249, 250, 0.95); 
+    backdrop-filter: blur(5px);
+}
+
+.nav-content {
+    max-width: 1000px; /* Match your portfolio width */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* .nav-logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #1a365d; 
+} */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1a365d;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--hover-color);
+}
+
+/* --- Conditional Nav Socials --- */
+.nav-socials {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    opacity: 0; 
+    visibility: hidden;
+    transform: translateX(15px); /* Pushed slightly right for a slide-in effect */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* This class will be toggled by our JavaScript */
+.nav-socials.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.nav-logo.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.nav-logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #1a365d; 
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    opacity: 0; 
+    visibility: hidden;
+    transform: translateX(15px); /* Pushed slightly right for a slide-in effect */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.nav-socials a {
+    text-decoration: none;
+    color: #1a365d;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-socials a:hover {
+    color: var(--hover-color);
+}
+
+/* Make the resume button stand out a bit more in the nav */
+.nav-socials .nav-resume-btn {
+    background-color: #1a365d;
+    color: #ffffff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+.nav-socials .nav-resume-btn:hover {
+    background-color: var(--hover-color);
+    color: #ffffff;
+}
+
+/* --- Skills Section Styles --- */
+.skills-section {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #1a365d;
+    margin-bottom: 2rem;
+}
+
+.skills-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.skills-column {
+    flex: 1;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.skills-column h3 {
+    color: #1a365d;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+    color: #4a5568;
+}
+
+/* --- Contact Footer --- */
+.contact-footer {
+    text-align: center;
+    padding: 5rem 20px 4rem 20px;
+    margin-top: 4rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.contact-footer h2 {
+    color: #1a365d;
+    margin-bottom: 0.5rem;
+}
+
+.contact-footer p {
+    color: #4a5568;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.contact-btn {
+    background-color: #1a365d;
+    color: #ffffff;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: var(--hover-color); /* Matches the red hover state */
+    color: #ffffff;
 }
