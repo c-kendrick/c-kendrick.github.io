@@ -8,11 +8,11 @@ html {
     --bg-color: #f4f4f9;
     --nav-bg: #f8f9fa;
     --text-color: #444;
-    --text-muted: #555; /* Slightly lighter for the footer */
+    --text-muted: #777;
     --card-bg: white;
     --primary-color: #0C405A;
     --hover-color: #800000; 
-    --gray-light: #e0e0e0; /* Used for tags and light borders */
+    --gray-light: #e0e0e0; 
 }
 
 body {
@@ -38,7 +38,7 @@ header:not(.about-section) h1 {
     color: white;
 }
 
-/* --- ABOUT ME SECTION (index.html) --- */
+/* --- ABOUT ME SECTION --- */
 header.about-section {
     background-color: transparent; 
     padding: 5rem 1rem 1rem 1rem; 
@@ -78,6 +78,13 @@ header.about-section li {
 .hero-text {
     font-size: 1.05rem; 
     color: var(--primary-color); 
+    line-height: 1.8;
+    margin-bottom: 1.5rem; 
+}
+
+.hobby-text {
+    font-size: 1.05rem; 
+    color: var(--text-muted); 
     line-height: 1.8;
     margin-bottom: 1.5rem; 
 }
@@ -251,7 +258,7 @@ header.about-section li {
 /* The dynamic shadow class */
 .sticky-nav.scrolled {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    background-color: rgba(248, 249, 250, 0.95); /* Kept explicit to maintain the exact RGBA opacity you had */
+    background-color: rgba(248, 249, 250, 0.95); 
     backdrop-filter: blur(5px);
 }
 
