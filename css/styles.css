@@ -50,14 +50,14 @@ header.about-section h1 {
 header.about-section ul {
     display: inline-block;
     text-align: left;
-    margin: 0 auto 2rem auto; /* Centers the block and adds bottom spacing */
+    margin: 0 auto 1rem auto; /* Centers the block and adds bottom spacing */
 }
 
 header.about-section li {
     font-size: 1.05rem; 
     color: #444; 
-    line-height: 1.8;
-    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
 }
 
 .bio-text {
