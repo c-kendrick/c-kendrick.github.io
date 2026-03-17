@@ -20,10 +20,10 @@ window.addEventListener('scroll', () => {
         // If the bottom of those buttons scrolls up past the 80px buffer (under the navbar)
         if (socialBottom < 80) {
             navSocials.classList.add('is-visible');
-            navLogo.classList.add('is-visible');
+            // navLogo.classList.add('is-visible');
         } else {
             navSocials.classList.remove('is-visible');
-            navLogo.classList.remove('is-visible');
+            // navLogo.classList.remove('is-visible');
         }
     }
 });

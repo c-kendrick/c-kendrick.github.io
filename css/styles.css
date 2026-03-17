@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 150px;
+    scroll-padding-top: 175px;
 }
 
 /* --- GLOBAL VARIABLES & BASE STYLES --- */
@@ -295,13 +295,13 @@ header.about-section li {
     font-weight: bold;
     font-size: 1.2rem;
     color: #1a365d; 
-    display: flex;
+    /* display: flex;
     gap: 1rem;
     align-items: center;
     opacity: 0; 
     visibility: hidden;
-    transform: translateX(15px); /* Pushed slightly right for a slide-in effect */
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    transform: translateX(15px); 
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; */
 }
 
 .nav-socials a {
