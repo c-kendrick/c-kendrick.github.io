@@ -6,10 +6,13 @@ html {
 /* --- GLOBAL VARIABLES & BASE STYLES --- */
 :root {
     --bg-color: #f4f4f9;
-    --text-color: #333;
-    --card-bg: #ffffff;
+    --nav-bg: #f8f9fa;
+    --text-color: #444;
+    --text-muted: #555; /* Slightly lighter for the footer */
+    --card-bg: white;
     --primary-color: #0C405A;
     --hover-color: #800000; 
+    --gray-light: #e0e0e0; /* Used for tags and light borders */
 }
 
 body {
@@ -55,36 +58,36 @@ header.about-section h1 {
 header.about-section ul {
     display: inline-block;
     text-align: left;
-    margin: 0 auto 1rem auto; /* Centers the block and adds bottom spacing */
+    margin: 0 auto 1rem auto;
 }
 
 header.about-section li {
     font-size: 1.05rem; 
-    color: #444; 
+    color: var(--text-color); 
     line-height: 1.4;
     margin-bottom: 0.3rem;
 }
 
 .bio-text {
     font-size: 1.05rem; 
-    color: #444; 
+    color: var(--text-color); 
     line-height: 1.8;
     margin-bottom: 1.5rem; 
 }
 
 .coursework-intro {
-    margin-bottom: 0.5rem; /* Reduces the gap above the list */
+    margin-bottom: 0.5rem; 
 }
 
 .coursework {
-    color: #444; 
+    color: var(--text-color); 
     line-height: 1.4;
     margin-bottom: 1rem;
 }
 
 .coursework p {
-  margin-top: 5px; /* Adjust the top margin */
-  margin-bottom: 5px; /* Adjust the bottom margin */
+  margin-top: 5px; 
+  margin-bottom: 5px; 
 }
 
 .social-links a {
@@ -142,7 +145,7 @@ header.about-section li {
 
 .card-content p {
     font-size: 0.95rem;
-    color: #555;
+    color: var(--text-color);
 }
 
 .card-image-wrapper {
@@ -159,7 +162,7 @@ header.about-section li {
 
 .tag {
     display: inline-block;
-    background: #e0e0e0;
+    background: var(--gray-light);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-size: 0.8rem;
@@ -202,6 +205,7 @@ header.about-section li {
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-align: center; /* Added this back in! */
 }
 
 .project-container {
@@ -232,7 +236,7 @@ header.about-section li {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #f8f9fa; /* Match your page background */
+    background-color: var(--nav-bg);
     padding: 1rem 0;
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -240,24 +244,18 @@ header.about-section li {
 /* The dynamic shadow class */
 .sticky-nav.scrolled {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    background-color: rgba(248, 249, 250, 0.95); 
+    background-color: rgba(248, 249, 250, 0.95); /* Kept explicit to maintain the exact RGBA opacity you had */
     backdrop-filter: blur(5px);
 }
 
 .nav-content {
-    max-width: 1000px; /* Match your portfolio width */
+    max-width: 1000px; 
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
 }
-
-/* .nav-logo {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #1a365d; 
-} */
 
 .nav-links {
     list-style: none;
@@ -269,7 +267,7 @@ header.about-section li {
 
 .nav-links a {
     text-decoration: none;
-    color: #1a365d;
+    color: var(--primary-color);
     font-weight: 500;
     transition: color 0.2s;
 }
@@ -285,11 +283,10 @@ header.about-section li {
     align-items: center;
     opacity: 0; 
     visibility: hidden;
-    transform: translateX(15px); /* Pushed slightly right for a slide-in effect */
+    transform: translateX(15px); 
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 
-/* This class will be toggled by our JavaScript */
 .nav-socials.is-visible {
     opacity: 1;
     visibility: visible;
@@ -305,19 +302,12 @@ header.about-section li {
 .nav-logo {
     font-weight: bold;
     font-size: 1.2rem;
-    color: #1a365d; 
-    /* display: flex;
-    gap: 1rem;
-    align-items: center;
-    opacity: 0; 
-    visibility: hidden;
-    transform: translateX(15px); 
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; */
+    color: var(--primary-color); 
 }
 
 .nav-socials a {
     text-decoration: none;
-    color: #1a365d;
+    color: var(--primary-color);
     font-size: 0.9rem;
     font-weight: 500;
     transition: color 0.2s;
@@ -327,17 +317,16 @@ header.about-section li {
     color: var(--hover-color);
 }
 
-/* Make the resume button stand out a bit more in the nav */
 .nav-socials .nav-resume-btn {
-    background-color: #1a365d;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: white;
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
 }
 
 .nav-socials .nav-resume-btn:hover {
     background-color: var(--hover-color);
-    color: #ffffff;
+    color: white;
 }
 
 /* --- Skills Section Styles --- */
@@ -347,12 +336,6 @@ header.about-section li {
     padding: 0 20px;
 }
 
-.section-title {
-    text-align: center;
-    color: #1a365d;
-    margin-bottom: 2rem;
-}
-
 .skills-container {
     display: flex;
     gap: 2rem;
@@ -360,15 +343,15 @@ header.about-section li {
 
 .skills-column {
     flex: 1;
-    background: #ffffff;
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .skills-column h3 {
-    color: #1a365d;
-    border-bottom: 2px solid #e2e8f0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--gray-light);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
@@ -381,7 +364,7 @@ header.about-section li {
 .skills-list li {
     margin-bottom: 0.8rem;
     line-height: 1.5;
-    color: #4a5568;
+    color: var(--text-color);
 }
 
 /* --- Contact Footer --- */
@@ -389,23 +372,23 @@ header.about-section li {
     text-align: center;
     padding: 5rem 20px 4rem 20px;
     margin-top: 4rem;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid var(--gray-light);
 }
 
 .contact-footer h2 {
-    color: #1a365d;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
 .contact-footer p {
-    color: #4a5568;
+    color: var(--text-muted);
     margin-bottom: 2rem;
     font-size: 1.1rem;
 }
 
 .contact-btn {
-    background-color: #1a365d;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: white;
     padding: 0.8rem 2.5rem;
     font-size: 1.1rem;
     font-weight: bold;
@@ -415,6 +398,6 @@ header.about-section li {
 }
 
 .contact-btn:hover {
-    background-color: var(--hover-color); /* Matches the red hover state */
-    color: #ffffff;
+    background-color: var(--hover-color); 
+    color: white;
 }
