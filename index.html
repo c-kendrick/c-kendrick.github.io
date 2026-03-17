@@ -47,11 +47,17 @@
                 <h2>Personal Finance Dashboard</h2>
                 <div>
                     <span class="tag">HTML/CSS/JS</span>
+                    <span class="tag">Client-Side Storage</span>
                     <span class="tag">Chart.js</span>
-                    <span class="tag">Local Storage</span>
+                    <span class="tag">State Management</span>
                 </div>
-                <p><strong>Overview:</strong> A lightweight, privacy-focused financial tracker utilizing the browser's local storage to map income, expenses, and savings across weekly, monthly, and yearly metrics.</p>
-                <p><strong>Technical Decisions:</strong> Built entirely in vanilla ES6 JavaScript to ensure a zero-build-step, high-speed application. I bypassed external databases in favour of the browser's native <code>localStorage</code> API to create a secure, local-first experience. Data visualization is handled dynamically via Chart.js.</p>
+                <p><strong>Overview:</strong> An offline-first financial dashboard that processes and visualizes user income, expenses, 
+                    and savings metrics in real-time without requiring server-side computation.
+                </p>
+                <p><strong>Technical Decisions:</strong> Built in vanilla ES6 JavaScript to demonstrate core DOM manipulation and state 
+                    management without heavy frameworks. I utilized the browser's native Web Storage API for secure, zero-latency data persistence, 
+                    and integrated Chart.js for dynamic data visualization.
+                </p>
                 <div class="button-group">
                     <a href="https://github.com/c-kendrick/finance-tool" class="btn" target="_blank" rel="noopener noreferrer">Project Info & Source Code</a>
                     <a href="https://c-kendrick.github.io/finance-tool/" class="btn" target="_blank" rel="noopener noreferrer">View Site</a>
@@ -68,11 +74,14 @@
                 <div>
                     <span class="tag">Java</span>
                     <span class="tag">Recursion</span>
-                    <span class="tag">OOP</span>
-                    <span class="tag">CSV File I/O</span>
+                    <span class="tag">Object-Oriented Design</span>
+                    <span class="tag">Data Persistence</span>
                 </div>
-                <p><strong>Overview:</strong> An infinite, text & turn based Java dungeon crawler blending class tactics and race matchups with equipment progression and strategic AP use.</p>
-                <p><strong>Technical Decisions:</strong> Extensively utilizes OOP inheritance to share core fields across characters while subclassing for specific abilities. The dungeon itself is a recursive structure holding lists of enemy objects, allowing combat logic to treat all entities uniformly. Built intentionally for extensibility so new content slots in without refactoring core flows.</p>
+                <p><strong>Overview:</strong> A Java command-line application designed to demonstrate scalable Object-Oriented Programming (OOP) principles, algorithmic logic, and data persistence.</p>
+                <p><strong>Technical Decisions:</strong> Built a robust OOP hierarchy utilising inheritance and polymorphism to manage diverse entity behaviors. I implemented a recursive data structure to 
+                    process collections of objects uniformly, and used CSV File I/O for local data persistence and state tracking. The codebase was strictly designed for extensibility, ensuring new features 
+                    can be integrated without refactoring core control flows.
+                </p>
                 <div class="button-group">
                     <a href="https://github.com/c-kendrick/COMP1010" class="btn" target="_blank" rel="noopener noreferrer">Project Info, Code & Builds</a>
                     <a href="https://ckendrick-mqu.itch.io/dungeons" class="btn" target="_blank" rel="noopener noreferrer">Play in Browser</a>
@@ -87,13 +96,13 @@
             <div class="card-content">
                 <h2>Counter Knights: Arcane Offensive</h2>
                 <div>
-                    <span class="tag">WebGL</span>
-                    <span class="tag">Unity</span>
+                    <span class="tag">WebGL & Unity</span>
+                    <span class="tag">Vector Math</span>
                     <span class="tag">Raycasting</span>
                 </div>
-                <p><strong>Overview:</strong> Medieval top down 2D tactical shooter with heavy emphasis on recoil. Built with a core focus on recoil-driven spell combat and deterministic movement.</p>
-                <p><strong>Technical Decisions:</strong> Utilises raycasting to determine enemy line-of-sight. Prioritized WebGL stability by avoiding heavy physics engines. Movement is transform-based to keep motion 
-                    deterministic and recoil predictable. Spells are prefab-driven, allowing independent tuning of damage and spread.</p>
+                <p><strong>Overview:</strong> A WebGL Unity application demonstrating real-time vector math, deterministic state management, and algorithmic recoil calculation.</p>
+                <p><strong>Technical Decisions:</strong> Built core game logic, including raycasting for line-of-sight, and Finite State Machines for AI behaviour. 
+                    For the core combat loop, I developed a dynamic recoil algorithm that calculates output deviation through real-time state tracking and variable time-decay mathematics.</p>
                 <div class="button-group">
                     <a href="https://github.com/c-kendrick/counter-knights/" class="btn" target="_blank" rel="noopener noreferrer">Project Info & Source Code</a>
                     <a href="https://ckendrick-mqu.itch.io/counter-knights-arcane-offensive" class="btn" target="_blank" rel="noopener noreferrer">Play in Browser</a>
