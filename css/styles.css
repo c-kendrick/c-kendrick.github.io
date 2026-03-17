@@ -76,6 +76,17 @@ header.about-section li {
     margin-bottom: 0.5rem; /* Reduces the gap above the list */
 }
 
+.coursework {
+    color: #444; 
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.coursework p {
+  margin-top: 5px; /* Adjust the top margin */
+  margin-bottom: 5px; /* Adjust the bottom margin */
+}
+
 .social-links a {
     display: inline-block;
     margin: 0 10px;
