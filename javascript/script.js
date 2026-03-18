@@ -2,7 +2,6 @@
 const navbar = document.getElementById('navbar');
 const navSocials = document.getElementById('nav-socials');
 const originalSocials = document.querySelector('.social-links');
-const navLogo = document.querySelector('.nav-logo');
 
 window.addEventListener('scroll', () => {
     // 1. Handle the navbar drop shadow
@@ -56,11 +55,9 @@ const appearOptions = {
 // Create the observer
 const appearOnScroll = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            return; 
-        } else {
+        if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target); 
+            observer.unobserve(entry.target);
         }
     });
 }, appearOptions);
