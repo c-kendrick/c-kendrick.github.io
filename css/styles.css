@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 175px;
@@ -80,6 +81,10 @@ header.about-section li {
     color: var(--primary-color); 
     line-height: 1.8;
     margin-bottom: 1.5rem; 
+}
+
+.mini-title {
+    font-family: "Times New Roman", serif;
 }
 
 .hobby-text {
@@ -214,6 +219,7 @@ header.about-section li {
 
 /* --- SECTION HEADERS --- */
 .section-title {
+    font-family: "EB Garamond", serif;
     color: var(--primary-color);
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -314,8 +320,9 @@ header.about-section li {
 }
 
 .nav-logo {
+    font-family: "Times New Roman", serif;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--primary-color); 
 }
 
@@ -363,7 +370,7 @@ header.about-section li {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.skills-column h3 {
+.skills-column h2 {
     color: var(--primary-color);
     border-bottom: 2px solid var(--gray-light);
     padding-bottom: 0.5rem;
