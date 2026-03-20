@@ -76,10 +76,14 @@ header.about-section li {
     margin-bottom: 1.5rem; 
 }
 
+.hero-text, .results-text {
+    font-size: 1rem;
+    color: var(--primary-color);
+    line-height: 1.8;
+}
+
 .results-text {
     font-size: 1.5rem;
-    color: var(--primary-color); 
-    line-height: 1.8;
 }
 
 .mini-title {
