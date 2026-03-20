@@ -329,15 +329,30 @@ header.about-section li {
     color: var(--primary-color); 
 }
 
-.nav-socials a, .mc-nav-socials a {
+.btn-mc {
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    padding: 8px;
+    flex: 1;
+    text-align: center;
+}
+
+.btn-mc:hover {
+    border: 2px solid var(--hover-color);
+}
+
+.nav-socials a, .mc-nav-socials a, .btn-mc {
     text-decoration: none;
     color: var(--primary-color);
+}
+
+.nav-socials a, .mc-nav-socials a {
     font-size: 0.9rem;
     font-weight: 500;
     transition: color 0.2s;
 }
 
-.nav-socials a:hover, .mc-nav-socials a:hover {
+.nav-socials a:hover, .mc-nav-socials a:hover, .btn-mc:hover {
     color: var(--hover-color);
 }
 
