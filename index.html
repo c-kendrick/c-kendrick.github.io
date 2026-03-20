@@ -30,7 +30,7 @@
     <div id="about">
         <h2 class="section-title">About Me</h2>
         <p class="hero-text">
-            <strong>Hi, I'm Christopher. A software developer merging management experience with clean code.</strong>
+            <strong>Hi, I'm Christopher, a software developer merging management experience with clean code.</strong>
         </p>
         <p class="bio-text">
             As a final-year software development student, I draw heavily on my experience as a cinema duty manager.
@@ -66,22 +66,21 @@
             <h2 class="mini-title">Minecraft Java Plugins</h2>
             <div>
                 <span class="tag">Java</span>
-                <span class="tag">Third-Party API Calls</span>
-                <span class="tag">Automated Scheduling</span>
-                <span class="tag">Role-Based Access Control</span>
+                <span class="tag">API Integration</span>
+                <span class="tag">Event-Driven</span>
+                <span class="tag">RBAC</span>
             </div>
 
-            <p><strong>Overview:</strong> Developed custom Java plugins to extend core gameplay mechanics for a live server, supporting 200+
-                lifetime users and 1,000+ plugin downloads. </p>
+            <p><strong>Overview:</strong> Developed custom Java applications for a live server, supporting 200+
+                lifetime users and 1,000+ total downloads. </p>
 
             <p><strong>Technical Decisions:</strong></p>
             <ul>
                 <li><strong>API Ecosystem:</strong> Integrated third-party APIs to manage economy states, entity routing, and region permissions.
                 </li>
-                <li><strong>Procedural Logic:</strong> Leveraged the WorldEdit API for large-scale spatial data manipulation and weighted terrain generation.
+                <li><strong>Spatial Data:</strong> Leveraged the WorldEdit API for large-scale spatial data manipulation and weighted block generation.
                 </li>
-                <li><strong>Async Schedulers:</strong> Automated daily batch processes via server-side tasks.
-                </li>
+                <li><strong>Access Control:</strong> Implemented a custom RBAC gateway to validate user privileges before executing critical backend operations.</li>
             </ul>
 
             <div class="button-group">
@@ -96,52 +95,19 @@
 
     <div class="card fade-in">
         <div class="card-content">
-            <h2 class="mini-title">Dungeons & Dungeons & Dungeons</h2>
-            <div>
-                <span class="tag">Java</span>
-                <span class="tag">JUnit Testing</span>
-                <span class="tag">Object-Oriented Design</span>
-                <span class="tag">Data Persistence</span>
-            </div>
-            <p><strong>Overview:</strong> A Java command-line application designed to demonstrate scalable
-                Object-Oriented Programming (OOP) principles, recursion, algorithmic logic,
-                and data persistence.</p>
-            <p><strong>Technical Decisions:</strong> As team lead, I built an extensible OOP hierarchy using inheritance
-                and polymorphism. I implemented recursive data
-                structures for uniform object processing and utilised CSV I/O for state tracking. To ensure the
-                stability of these core systems, I integrated comprehensive unit
-                testing across all game logic.
-            </p>
-            <div class="button-group">
-                <a href="https://github.com/c-kendrick/COMP1010" class="btn" target="_blank" rel="noopener noreferrer">Project
-                    Info, Code & Builds</a>
-                <a href="https://ckendrick-mqu.itch.io/dungeons" class="btn" target="_blank" rel="noopener noreferrer">Play
-                    in Browser</a>
-            </div>
-        </div>
-        <div class="card-image-wrapper">
-            <img src="images/dungeons.png" alt="Dungeons Console Gameplay">
-        </div>
-    </div>
-
-    <div class="card reverse fade-in">
-        <div class="card-content">
             <h2 class="mini-title">Personal Finance Dashboard</h2>
             <div>
-                <span class="tag">HTML/CSS/JS</span>
-                <span class="tag">Client-Side Storage</span>
+                <span class="tag">JavaScript (ES6)</span>
+                <span class="tag">Web Storage API</span>
                 <span class="tag">Chart.js</span>
                 <span class="tag">State Management</span>
             </div>
             <p><strong>Overview:</strong> An offline-first financial dashboard that processes and visualises user
-                income, expenses,
-                and savings metrics in real-time without requiring server-side computation.
+                income, expenses, and savings metrics in real-time.
             </p>
-            <p><strong>Technical Decisions:</strong> Built in vanilla ES6 JavaScript to demonstrate core DOM
-                manipulation and state
-                management without heavy frameworks. I utilised the browser's native Web Storage API for secure,
-                zero-latency data persistence,
-                and integrated Chart.js for dynamic data visualisation.
+            <p><strong>Technical Decisions:</strong> Built in vanilla ES6 JavaScript to handle DOM
+                manipulation and state management. Utilised the browser's native Web Storage API for secure,
+                zero-latency client-side data persistence, and integrated Chart.js for dynamic data visualisation.
             </p>
             <div class="button-group">
                 <a href="https://github.com/c-kendrick/finance-tool" class="btn" target="_blank"
@@ -155,21 +121,47 @@
         </div>
     </div>
 
+    <div class="card reverse fade-in">
+        <div class="card-content">
+            <h2 class="mini-title">Dungeons & Dungeons & Dungeons</h2>
+            <div>
+                <span class="tag">Java</span>
+                <span class="tag">JUnit Testing</span>
+                <span class="tag">OOP Architecture</span>
+                <span class="tag">File I/O</span>
+            </div>
+            <p><strong>Overview:</strong> A Java command-line application designed to demonstrate scalable
+                Object-Oriented Programming (OOP) principles, algorithmic logic, and data persistence.</p>
+            <p><strong>Technical Decisions:</strong> Engineered an extensible class hierarchy using inheritance
+                and polymorphism. Implemented recursive data structures for uniform object processing and utilised
+                CSV I/O for state tracking. Integrated comprehensive JUnit testing across all core game logic to ensure system stability.
+            </p>
+            <div class="button-group">
+                <a href="https://github.com/c-kendrick/COMP1010" class="btn" target="_blank" rel="noopener noreferrer">Project
+                    Info, Code & Builds</a>
+                <a href="https://ckendrick-mqu.itch.io/dungeons" class="btn" target="_blank" rel="noopener noreferrer">Play
+                    in Browser</a>
+            </div>
+        </div>
+        <div class="card-image-wrapper">
+            <img src="images/dungeons.png" alt="Dungeons Console Gameplay">
+        </div>
+    </div>
+
     <div class="card fade-in">
         <div class="card-content">
             <h2 class="mini-title">Counter Knights: Arcane Offensive</h2>
             <div>
                 <span class="tag">WebGL & Unity</span>
-                <span class="tag">Vector Maths</span>
+                <span class="tag">Vector Math</span>
                 <span class="tag">Raycasting</span>
-                <span class="tag">Visual Scripting</span>
+                <span class="tag">State Machines</span>
             </div>
-            <p><strong>Overview:</strong> A WebGL Unity application demonstrating real-time vector maths, deterministic
-                state management, and algorithmic recoil calculation.</p>
-            <p><strong>Technical Decisions:</strong> Developed the game's underlying logic via Unity Visual Scripting,
-                including AI state machines driven by ray-casting for line-of-sight.
-                For the core combat loop, I developed a dynamic recoil system using real-time vector maths and
-                time-decay mathematics.
+            <p><strong>Overview:</strong> A WebGL Unity application demonstrating deterministic
+                state management, AI routing, and algorithmic physics calculations.</p>
+            <p><strong>Technical Decisions:</strong> Developed AI state machines driven by ray-casting for
+                line-of-sight detection. Engineered a dynamic recoil and combat system using real-time
+                vector math and time-decay algorithms.
             </p>
             <div class="button-group">
                 <a href="https://github.com/c-kendrick/counter-knights/" class="btn" target="_blank"
