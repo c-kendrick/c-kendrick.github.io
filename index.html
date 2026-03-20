@@ -8,161 +8,217 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav id="navbar" class="sticky-nav">
-        <div class="nav-content">
-            <span class="nav-logo">Christopher Kendrick</span>
-            <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#skills">Skills & Expertise</a></li>
-                <li><a href="#contact">Contact</a></li>
+<nav id="navbar" class="sticky-nav">
+    <div class="nav-content">
+        <span class="nav-logo">Christopher Kendrick</span>
+        <ul class="nav-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skills">Skills & Expertise</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-socials" id="nav-socials">
+            <a href="https://github.com/c-kendrick" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="files/CV-Christopher-Kendrick.pdf" target="_blank" rel="noopener noreferrer"
+               class="nav-resume-btn">Resume</a>
+        </div>
+    </div>
+</nav>
+
+<header class="about-section">
+    <div id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="hero-text">
+            <strong>Hi, I'm Christopher. A software developer merging management experience with clean code.</strong>
+        </p>
+        <p class="bio-text">
+            As a final-year software development student, I draw heavily on my experience as a cinema duty manager.
+            I use that operational background to drive Agile methodologies, define realistic project scopes, and ensure
+            predictable development cycles.
+        </p>
+        <p class="bio-text coursework-intro">
+            <strong>My relevant coursework includes:</strong>
+        </p>
+        <div class="coursework">
+            <p><strong>Project Management:</strong> Managed Agile sprints and deliverables in Jira as a rotating Scrum
+                Master.</p>
+            <!-- placeholder: -->
+            <p><strong>Technology Management:</strong> Co-authored a go-to-market business plan for a new high-tech
+                venture.</p>
+
+            <p><strong>Core Computer Science Classes:</strong> Object-Oriented Programming, Algorithms & Data
+                Structures, Discrete Mathematics,
+                Database Design & Development, and Web Technology.</p>
+        </div>
+        <br>
+        <div class="social-links">
+            <a href="https://github.com/c-kendrick" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="files/CV-Christopher-Kendrick.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
+    </div>
+</header>
+
+<div id="portfolio">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="card reverse fade-in">
+        <div class="card-content">
+            <h2 class="mini-title">Minecraft Java Plugins</h2>
+            <div>
+                <span class="tag">Java</span>
+                <span class="tag">Third-Party API Calls</span>
+                <span class="tag">Asynchronous Scheduling</span>
+                <span class="tag">Server Management</span>
+            </div>
+
+            <p><strong>Overview:</strong> Developed custom Java plugins to extend core gameplay mechanics for a live server, supporting 200+
+                lifetime users and 1,000+ plugin downloads. </p>
+
+            <p><strong>Technical Decisions:</strong></p>
+            <ul>
+                <li><strong>API Ecosystem:</strong> Integrated third-party APIs to manage economy states, entity routing, and region permissions.
+                </li>
+                <li><strong>Procedural Logic:</strong> Leveraged the WorldEdit API for large-scale spatial data manipulation and weighted terrain generation.
+                </li>
+                <li><strong>Async Schedulers:</strong> Automated daily batch processes via server-side tasks to prevent main-thread blocking.
+                </li>
             </ul>
-            
-            <div class="nav-socials" id="nav-socials">
-                <a href="https://github.com/c-kendrick" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="files/CV-Christopher-Kendrick.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume-btn">Resume</a>
+
+            <div class="button-group">
+                <a href="minecraft.html" class="btn" target="_blank"
+                   rel="noopener noreferrer">More Information</a>
             </div>
         </div>
-    </nav>
-
-    <header class="about-section">
-        <div id="about">
-            <h2 class="section-title">About Me</h2>
-            <p class="hero-text">
-                <strong>Hi, I'm Christopher. A software developer merging management experience with clean code.</strong>
-            </p>
-            <p class="bio-text">
-                As a final-year software development student, I draw heavily on my experience as a cinema duty manager.
-                I use that operational background to drive Agile methodologies, define realistic project scopes, and ensure predictable development cycles.
-            </p>
-            <p class="bio-text coursework-intro">
-                <strong>My relevant coursework includes:</strong>
-            </p>
-                <div class="coursework">
-                    <p><strong>Project Management:</strong> Managed Agile sprints and deliverables in Jira as a rotating Scrum Master.</p>              
-                    <!-- placeholder: -->
-                    <p><strong>Technology Management:</strong> Co-authored a go-to-market business plan for a new high-tech venture.</p>
-                    
-                    <p><strong>Core Computer Science Classes:</strong> Object-Oriented Programming, Algorithms & Data Structures, Discrete Mathematics,
-                        Database Design & Development, and Web Technology.</p>
-                </div>
-                <br>
-            <div class="social-links">
-                <a href="https://github.com/c-kendrick" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="files/CV-Christopher-Kendrick.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-            </div>
+        <div class="card-image-wrapper">
+            <img src="images/minecraft.png" alt="Minecraft Server Backend and Gameplay">
         </div>
-    </header>
-
-    <div id="portfolio">
-        <h2 class="section-title">Portfolio</h2>
-        <div class="card fade-in">
-            <div class="card-content">
-                <h2 class="mini-title">Dungeons & Dungeons & Dungeons</h2>
-                <div>
-                    <span class="tag">Java</span>
-                    <span class="tag">JUnit Testing</span>
-                    <span class="tag">Object-Oriented Design</span>
-                    <span class="tag">Data Persistence</span>
-                </div>
-                <p><strong>Overview:</strong> A Java command-line application designed to demonstrate scalable Object-Oriented Programming (OOP) principles, recursion, algorithmic logic, 
-                    and data persistence.</p>
-                <p><strong>Technical Decisions:</strong> As team lead, I built an extensible OOP hierarchy using inheritance and polymorphism. I implemented recursive data 
-                    structures for uniform object processing and utilised CSV I/O for state tracking. To ensure the stability of these core systems, I integrated comprehensive unit 
-                    testing across all game logic.
-                </p>
-                <div class="button-group">
-                    <a href="https://github.com/c-kendrick/COMP1010" class="btn" target="_blank" rel="noopener noreferrer">Project Info, Code & Builds</a>
-                    <a href="https://ckendrick-mqu.itch.io/dungeons" class="btn" target="_blank" rel="noopener noreferrer">Play in Browser</a>
-                </div>
-            </div>
-            <div class="card-image-wrapper">
-                <img src="images/dungeons.png" alt="Dungeons Console Gameplay">
-            </div>
-        </div>
-
-        <div class="card reverse fade-in">
-            <div class="card-content">
-                <h2 class="mini-title">Personal Finance Dashboard</h2>
-                <div>
-                    <span class="tag">HTML/CSS/JS</span>
-                    <span class="tag">Client-Side Storage</span>
-                    <span class="tag">Chart.js</span>
-                    <span class="tag">State Management</span>
-                </div>
-                <p><strong>Overview:</strong> An offline-first financial dashboard that processes and visualises user income, expenses,
-                    and savings metrics in real-time without requiring server-side computation.
-                </p>
-                <p><strong>Technical Decisions:</strong> Built in vanilla ES6 JavaScript to demonstrate core DOM manipulation and state 
-                    management without heavy frameworks. I utilised the browser's native Web Storage API for secure, zero-latency data persistence,
-                    and integrated Chart.js for dynamic data visualisation.
-                </p>
-                <div class="button-group">
-                    <a href="https://github.com/c-kendrick/finance-tool" class="btn" target="_blank" rel="noopener noreferrer">Project Info & Source Code</a>
-                    <a href="https://c-kendrick.github.io/finance-tool/" class="btn" target="_blank" rel="noopener noreferrer">View Site</a>
-                </div>
-            </div>
-            <div class="card-image-wrapper">
-                <img src="images/finance.png" alt="Finance Tracker Interface">
-            </div>
-        </div>
-
-        <div class="card fade-in">
-            <div class="card-content">
-                <h2 class="mini-title">Counter Knights: Arcane Offensive</h2>
-                <div>
-                    <span class="tag">WebGL & Unity</span>
-                    <span class="tag">Vector Maths</span>
-                    <span class="tag">Raycasting</span>
-                    <span class="tag">Visual Scripting</span>
-                </div>
-                <p><strong>Overview:</strong> A WebGL Unity application demonstrating real-time vector maths, deterministic state management, and algorithmic recoil calculation.</p>
-                <p><strong>Technical Decisions:</strong> Developed the game's underlying logic via Unity Visual Scripting, including AI state machines driven by ray-casting for line-of-sight.
-                    For the core combat loop, I developed a dynamic recoil system using real-time vector maths and time-decay mathematics.
-                </p>
-                <div class="button-group">
-                    <a href="https://github.com/c-kendrick/counter-knights/" class="btn" target="_blank" rel="noopener noreferrer">Project Info & Source Code</a>
-                    <a href="https://ckendrick-mqu.itch.io/counter-knights-arcane-offensive" class="btn" target="_blank" rel="noopener noreferrer">Play in Browser</a>
-                </div>
-            </div>
-            <div class="card-image-wrapper">
-                <img src="images/knights.png" alt="Counter Knights Gameplay">
-            </div>
-        </div>
-
     </div>
 
-    <section id="skills" class="skills-section">
-        <h2 class="section-title">Skills & Expertise</h2>
-        <div class="skills-container">
-            <div class="skills-column fade-in">
-                <h2 class="mini-title">Technical Skills</h2>
-                <ul class="skills-list">
-                    <li><strong>Languages:</strong> Java, C#, JavaScript, HTML, CSS</li>
-                    <li><strong>Architecture:</strong> Object-Oriented Design, Finite State Machines, Local State Management</li>
-                    <li><strong>Tools & Libraries:</strong> Git/GitHub, Unity, Chart.js, Jira</li>
-                    <li><strong>Core Concepts:</strong> Data Persistence, Vector Math, Algorithmic Logic, DOM Manipulation</li>
-                </ul>
+    <div class="card fade-in">
+        <div class="card-content">
+            <h2 class="mini-title">Dungeons & Dungeons & Dungeons</h2>
+            <div>
+                <span class="tag">Java</span>
+                <span class="tag">JUnit Testing</span>
+                <span class="tag">Object-Oriented Design</span>
+                <span class="tag">Data Persistence</span>
             </div>
-
-            <div class="skills-column fade-in">
-                <h2 class="mini-title">Professional & Management</h2>
-                <ul class="skills-list">
-                    <li><strong>Methodologies:</strong> Agile Development, Scrum Facilitation, Sprint Tracking</li>
-                    <li><strong>Leadership:</strong> Team Coordination, Conflict Resolution, High-Pressure Operations</li>
-                    <li><strong>Business Strategy:</strong> Cross-Functional Collaboration, Go-to-Market Business Planning</li>
-                    <li><strong>Project Scoping:</strong> Technical Documentation, Lifecycle Management</li>
-                </ul>
+            <p><strong>Overview:</strong> A Java command-line application designed to demonstrate scalable
+                Object-Oriented Programming (OOP) principles, recursion, algorithmic logic,
+                and data persistence.</p>
+            <p><strong>Technical Decisions:</strong> As team lead, I built an extensible OOP hierarchy using inheritance
+                and polymorphism. I implemented recursive data
+                structures for uniform object processing and utilised CSV I/O for state tracking. To ensure the
+                stability of these core systems, I integrated comprehensive unit
+                testing across all game logic.
+            </p>
+            <div class="button-group">
+                <a href="https://github.com/c-kendrick/COMP1010" class="btn" target="_blank" rel="noopener noreferrer">Project
+                    Info, Code & Builds</a>
+                <a href="https://ckendrick-mqu.itch.io/dungeons" class="btn" target="_blank" rel="noopener noreferrer">Play
+                    in Browser</a>
             </div>
         </div>
-    </section>
+        <div class="card-image-wrapper">
+            <img src="images/dungeons.png" alt="Dungeons Console Gameplay">
+        </div>
+    </div>
 
-    <footer id="contact" class="contact-footer fade-in">
-        <h2 class="mini-title">Contact Me</h2>
-        <p>Currently seeking graduate and junior software engineering roles.</p>
-        <a href="mailto:ckendrick@post.com" class="btn contact-btn">Get in Touch</a>
-    </footer>
+    <div class="card reverse fade-in">
+        <div class="card-content">
+            <h2 class="mini-title">Personal Finance Dashboard</h2>
+            <div>
+                <span class="tag">HTML/CSS/JS</span>
+                <span class="tag">Client-Side Storage</span>
+                <span class="tag">Chart.js</span>
+                <span class="tag">State Management</span>
+            </div>
+            <p><strong>Overview:</strong> An offline-first financial dashboard that processes and visualises user
+                income, expenses,
+                and savings metrics in real-time without requiring server-side computation.
+            </p>
+            <p><strong>Technical Decisions:</strong> Built in vanilla ES6 JavaScript to demonstrate core DOM
+                manipulation and state
+                management without heavy frameworks. I utilised the browser's native Web Storage API for secure,
+                zero-latency data persistence,
+                and integrated Chart.js for dynamic data visualisation.
+            </p>
+            <div class="button-group">
+                <a href="https://github.com/c-kendrick/finance-tool" class="btn" target="_blank"
+                   rel="noopener noreferrer">Project Info & Source Code</a>
+                <a href="https://c-kendrick.github.io/finance-tool/" class="btn" target="_blank"
+                   rel="noopener noreferrer">View Site</a>
+            </div>
+        </div>
+        <div class="card-image-wrapper">
+            <img src="images/finance.png" alt="Finance Tracker Interface">
+        </div>
+    </div>
 
-    <script src="javascript/script.js"></script>
+    <div class="card fade-in">
+        <div class="card-content">
+            <h2 class="mini-title">Counter Knights: Arcane Offensive</h2>
+            <div>
+                <span class="tag">WebGL & Unity</span>
+                <span class="tag">Vector Maths</span>
+                <span class="tag">Raycasting</span>
+                <span class="tag">Visual Scripting</span>
+            </div>
+            <p><strong>Overview:</strong> A WebGL Unity application demonstrating real-time vector maths, deterministic
+                state management, and algorithmic recoil calculation.</p>
+            <p><strong>Technical Decisions:</strong> Developed the game's underlying logic via Unity Visual Scripting,
+                including AI state machines driven by ray-casting for line-of-sight.
+                For the core combat loop, I developed a dynamic recoil system using real-time vector maths and
+                time-decay mathematics.
+            </p>
+            <div class="button-group">
+                <a href="https://github.com/c-kendrick/counter-knights/" class="btn" target="_blank"
+                   rel="noopener noreferrer">Project Info & Source Code</a>
+                <a href="https://ckendrick-mqu.itch.io/counter-knights-arcane-offensive" class="btn" target="_blank"
+                   rel="noopener noreferrer">Play in Browser</a>
+            </div>
+        </div>
+        <div class="card-image-wrapper">
+            <img src="images/knights.png" alt="Counter Knights Gameplay">
+        </div>
+    </div>
+
+</div>
+
+<section id="skills" class="skills-section">
+    <h2 class="section-title">Skills & Expertise</h2>
+    <div class="skills-container">
+        <div class="skills-column fade-in">
+            <h2 class="mini-title">Technical Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Languages:</strong> Java, C#, JavaScript, HTML, CSS</li>
+                <li><strong>Architecture:</strong> Object-Oriented Design, Finite State Machines, Local State Management
+                </li>
+                <li><strong>Tools & Libraries:</strong> Git/GitHub, Unity, Chart.js, Jira</li>
+                <li><strong>Core Concepts:</strong> Data Persistence, Vector Math, Algorithmic Logic, DOM Manipulation
+                </li>
+            </ul>
+        </div>
+
+        <div class="skills-column fade-in">
+            <h2 class="mini-title">Professional & Management</h2>
+            <ul class="skills-list">
+                <li><strong>Methodologies:</strong> Agile Development, Scrum Facilitation, Sprint Tracking</li>
+                <li><strong>Leadership:</strong> Team Coordination, Conflict Resolution, High-Pressure Operations</li>
+                <li><strong>Business Strategy:</strong> Cross-Functional Collaboration, Go-to-Market Business Planning
+                </li>
+                <li><strong>Project Scoping:</strong> Technical Documentation, Lifecycle Management</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer id="contact" class="contact-footer fade-in">
+    <h2 class="mini-title">Contact Me</h2>
+    <p>Currently seeking graduate and junior software engineering roles.</p>
+    <a href="mailto:ckendrick@post.com" class="btn contact-btn">Get in Touch</a>
+</footer>
+
+<script src="javascript/script.js"></script>
 </body>
 </html>

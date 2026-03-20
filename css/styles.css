@@ -76,11 +76,10 @@ header.about-section li {
     margin-bottom: 1.5rem; 
 }
 
-.hero-text {
-    font-size: 1.05rem; 
+.results-text {
+    font-size: 1.5rem;
     color: var(--primary-color); 
     line-height: 1.8;
-    margin-bottom: 1.5rem; 
 }
 
 .mini-title {
@@ -297,7 +296,7 @@ header.about-section li {
 }
 
 /* --- Conditional Nav Socials --- */
-.nav-socials {
+.nav-socials, .mc-nav-socials {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -307,7 +306,7 @@ header.about-section li {
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 
-.nav-socials.is-visible {
+.nav-socials.is-visible, .mc-nav-socials {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
@@ -326,7 +325,7 @@ header.about-section li {
     color: var(--primary-color); 
 }
 
-.nav-socials a {
+.nav-socials a, .mc-nav-socials a {
     text-decoration: none;
     color: var(--primary-color);
     font-size: 0.9rem;
@@ -334,18 +333,18 @@ header.about-section li {
     transition: color 0.2s;
 }
 
-.nav-socials a:hover {
+.nav-socials a:hover, .mc-nav-socials a:hover {
     color: var(--hover-color);
 }
 
-.nav-socials .nav-resume-btn {
+.nav-socials .nav-resume-btn, .mc-nav-socials .nav-resume-btn {
     background-color: var(--primary-color);
     color: white;
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
 }
 
-.nav-socials .nav-resume-btn:hover {
+.nav-socials .nav-resume-btn:hover, .mc-nav-socials .nav-resume-btn:hover {
     background-color: var(--hover-color);
     color: white;
 }

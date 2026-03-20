@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Plugin Suite | Project Info</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        .plugin-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .overview-box {
+            background: rgba(0, 0, 0, 0.03);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<nav id="navbar" class="sticky-nav">
+    <div class="nav-content">
+        <span class="nav-logo">Christopher Kendrick</span>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About Me</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#skills">Skills & Expertise</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <div class="mc-nav-socials" id="nav-socials">
+            <a href="https://github.com/c-kendrick" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="files/CV-Christopher-Kendrick.pdf" target="_blank" rel="noopener noreferrer"
+               class="nav-resume-btn">Resume</a>
+        </div>
+    </div>
+</nav>
+
+<header class="about-section">
+    <div id="about">
+        <h1 style="font-size: 2rem;">Minecraft Java Plugins & Server Management</h1>
+    </div>
+</header>
+
+
+<div class="project-container">
+    <div class="plugin-grid">
+        <div class="card">
+            <div class="card-content">
+                <h2 class="mini-title">SkyFactions2</h2>
+                <div>
+                    <span class="tag">Third Party API Integration</span>
+                    <span class="tag">Custom YAML I/O</span>
+                    <span class="tag">Event-Driven State Machine</span>
+                    <span class="tag">Chunk-Based Spatial Logic</span>
+                </div>
+                <ul>
+                    <li><strong>APIs Used:</strong> Vault, WorldEdit, and WorldGuard.</li>
+                    <li><strong>Economy & Protection:</strong> Hooked into <strong>Vault API</strong> to handle real-time transactions, and utilised <strong>WorldGuard API</strong> to generate protected regions for sky-faction land.</li>
+                    <li><strong>Dynamic Schematics:</strong> Leveraged <strong>WorldEdit API</strong> to reliably paste starting sky-island schematics into the world upon faction creation.</li>
+                    <li><strong>Spatial Mathematics:</strong> Programmed chunk-based coordinate math to accurately calculate, validate, and process new land claims.</li>
+                    <li><strong>Custom Data Persistence:</strong> Wrote custom classes to handle YAML File I/O, persisting faction hierarchies across server restarts.</li>
+                    <li><strong>State Management:</strong> Built an event-driven state machine to track war declarations, alliance applications, and peace treaties.</li>
+                    <li><strong>Damage Interception:</strong> Intercepted entity damage events (including projectiles and splash potions) to enforce custom friendly-fire rules based on war states.</li>
+                </ul>
+                <div class="button-group">
+                    <a href="https://github.com/c-kendrick/SkyFactions2" class="btn" target="_blank" rel="noopener noreferrer">View Source Code</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2 class="mini-title">WallStreetV2: Schedulers & Logic</h2>
+                <div>
+                    <span class="tag">Bukkit Schedulers</span>
+                    <span class="tag">Procedural Gen</span>
+                    <span class="tag">Event Interception</span>
+                    <span class="tag">3D Region Math</span>
+                </div>
+                <ul>
+                    <li><strong>APIs Used:</strong> WorldEdit.</li>
+                    <li><strong>Asynchronous Tasks:</strong> Implemented server-side schedulers to automate non-blocking daily batch processes, such as resetting corporate mines every 24 hours.</li>
+                    <li><strong>Procedural Generation:</strong> Hooked into the <strong>WorldEdit API</strong> to define and physically spawn large-scale mine regions, utilising <em>"RandomPattern"</em>  to generate the terrain based on exact weighted percentage variables (e.g., 50% stone, 10% diamond).</li>
+                    <li><strong>Event Interception & Boundaries:</strong> Intercepted player movement and interaction events to dynamically track chunk entry/exit, broadcasting land ownership changes to the UI while calculating if a broken block fell within specific 3D region bounds to enforce build permissions.</li>
+                </ul>
+                <div class="button-group">
+                    <a href="https://github.com/c-kendrick/WallStreetv2" class="btn" target="_blank" rel="noopener noreferrer">View Source Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="results-text">Production, Live Operations & its Results</h2>
+    <p>Running this server for 200+ lifetime users was an incredible experience that bridged the gap between a lifelong hobby and professional software engineering.
+        Beyond just writing the Java code, I got to engage directly with an active community.
+        Deploying these plugins to a live user base provided experience in responding to direct user feedback, pushing hotfixes, and reading crash logs.</p>
+
+
+    <p>While these specific repositories are archived, the backend architecture principles, including API hooking, asynchronous operations, and spatial mathematics,
+        will continue to inform my current approach to enterprise software development.</p>
+
+    <p class="hobby-text">These plugins were originally written in 2024 and have recently been uploaded to GitHub for archival.</p>
+</div>
+
+<script src="javascript/script.js"></script>
+</body>
+</html>
