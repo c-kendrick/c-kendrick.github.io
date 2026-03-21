@@ -387,11 +387,11 @@ header.about-section li {
 
 .skills-container {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
 }
 
 .skills-column {
-    flex: 1;
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 8px;
@@ -415,6 +415,25 @@ header.about-section li {
     line-height: 1.5;
     color: var(--text-color);
 }
+
+/* =========================================
+   DESKTOP STYLES (Only kicks in on screens wider than 800px)
+   ========================================= */
+@media screen and (min-width: 801px) {
+
+    /* Change the layout to side-by-side */
+    .skills-container {
+        flex-direction: row;
+        gap: 2rem; /* Bring back the wider gap for desktop */
+    }
+
+    /* Apply the width ratios ONLY on desktop */
+    .skills-column {
+        flex: 1.5;
+    }
+}
+
+
 
 /* --- Contact Footer --- */
 .contact-footer {
