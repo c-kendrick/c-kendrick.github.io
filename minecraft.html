@@ -50,14 +50,15 @@
                 <h2 class="mini-title">SkyFactions2</h2>
                 <div>
                     <span class="tag">State Machine</span>
-                    <span class="tag">Spatial Math</span>
+                    <span class="tag">Spatial Maths</span>
                     <span class="tag">Custom YAML I/O</span>
                     <span class="tag">RBAC</span>
                 </div>
                 <p><strong>APIs Used:</strong> Vault, WorldEdit, WorldGuard</p>
                 <ul>
-                    <li><strong>Spatial Logic & Protection:</strong> Programmed chunk-based coordinate maths to calculate territory claims. Leveraged the <strong>WorldEdit API</strong> to programmatically paste starting schematics and the <strong>WorldGuard API</strong> to generate protected 3D regions.</li>
-                    <li><strong>State Management & Data:</strong> Built an event-driven state machine to govern server-wide diplomacy (wars, alliances) and intercept complex entity damage events (projectiles, splash potions). Wrote custom YAML File I/O classes to persist faction states across server reloads.</li>
+                    <li><strong>API Integration: </strong>Leveraged the WorldEdit API to programmatically paste starting schematics and the WorldGuard API to generate protected 3D regions.</li>
+                    <li><strong>State Management & Data:</strong> Built an event-driven state machine to govern server-wide diplomacy and intercept complex entity damage events. Wrote custom YAML File I/O classes to persist faction states across server reloads.</li>
+                    <li><strong>Spatial Logic & Protection:</strong> Programmed chunk-based coordinate maths to calculate territory claims. </li>
                 </ul>
 
                 <p><strong>Role-Based Access Control:</strong></p>
@@ -77,15 +78,14 @@
                 <div>
                     <span class="tag">Procedural Gen</span>
                     <span class="tag">Event-Driven</span>
-                    <span class="tag">Spatial Math</span>
+                    <span class="tag">Spatial Maths</span>
                     <span class="tag">RBAC</span>
                 </div>
 
                 <p><strong>APIs Used:</strong> WorldEdit</p>
                 <ul>
                     <li><strong>Procedural Generation:</strong> Hooked into the <strong>WorldEdit API</strong> to physically spawn
-                        large-scale mine regions, utilising a <em>"RandomPattern"</em>  algorithm to generate terrain based on exact weighted percentages
-                        (e.g., 50% stone, 10% diamond).</li>
+                        large-scale mine regions, utilising a <em>"RandomPattern"</em>  WorldEdit-algorithm to generate terrain based on exact weighted percentages.</li>
                     <li><strong>Batch Processing:</strong> Implemented server-side schedulers to automate daily tasks,
                         such as resetting corporate mines every 24 hours.</li>
                 </ul>
@@ -106,10 +106,10 @@
         </div>
     </div>
 
-    <h2 class="results-text">Production, Live Operations & its Results</h2>
+    <h2 class="results-text">Production, Live Operations & Results</h2>
     <p>Running this server for 200+ lifetime users was an incredible experience that bridged the gap between a lifelong hobby and professional software engineering.
-        Beyond just writing the Java code, I got to engage directly with an active community.
-        Deploying these plugins to a live user base provided experience in responding to direct user feedback, pushing hotfixes, and reading crash logs.</p>
+        Beyond just writing the Java code, I had the opportunity to engage directly with an active community.
+        Deploying these plugins to a live user base provided experience in responding to user feedback, pushing hotfixes, and reading crash logs.</p>
 
 
     <p>While these specific repositories are archived, the backend architecture principles, including API hooking, RBAC, and spatial mathematics,
