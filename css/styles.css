@@ -138,22 +138,14 @@ header.about-section li {
 
 .card {
     display: flex;
-    align-items: center;
-    gap: 2rem;
+    flex-direction: column; /* Stack vertically by default for mobile */
+    gap: 1.5rem; /* Slightly smaller gap for mobile */
     background-color: var(--card-bg);
     border-radius: 8px;
     padding: 2rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    margin-bottom: 3rem; 
+    margin-bottom: 3rem;
     transition: transform 0.2s ease;
-}
-
-.card.reverse {
-    flex-direction: row-reverse; 
-}
-
-.card-content {
-    flex: 1.5; 
 }
 
 .card-content h2 {
@@ -166,16 +158,38 @@ header.about-section li {
     color: var(--text-color);
 }
 
-.card-image-wrapper {
-    flex: 1;
-}
-
 .card-image-wrapper img {
     width: 100%;
     height: auto;
     display: block;
-    border: 3px solid var(--primary-color); 
+    border: 3px solid var(--primary-color);
     border-radius: 4px;
+}
+
+/* =========================================
+   DESKTOP STYLES (Only kicks in on screens wider than 800px)
+   ========================================= */
+@media screen and (min-width: 801px) {
+
+    /* Change the layout to side-by-side */
+    .card {
+        flex-direction: row;
+        gap: 2rem; /* Bring back the wider gap for desktop */
+    }
+
+    /* Apply the alternating reverse rule ONLY on desktop */
+    .card.reverse {
+        flex-direction: row-reverse;
+    }
+
+    /* Apply the width ratios ONLY on desktop */
+    .card-content {
+        flex: 1.5;
+    }
+
+    .card-image-wrapper {
+        flex: 1;
+    }
 }
 
 .tag {
