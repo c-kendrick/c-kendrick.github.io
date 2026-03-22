@@ -94,6 +94,10 @@
     border: 2px solid var(--hover-color);
 }
 
+.text-desktop {
+    display: none;
+}
+
 .plugin-grid {
     display: flex;
     flex-direction: column;
@@ -121,5 +125,13 @@
 
     .card-image-wrapper {
         flex: 1;
+    }
+
+    .text-desktop {
+        display: inline;
+    }
+
+    .text-mobile {
+        display: none;
     }
 }

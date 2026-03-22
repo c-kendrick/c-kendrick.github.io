@@ -73,6 +73,7 @@
     gap: 1rem;
     align-items: flex-start;
     justify-content: space-between;
+
 }
 
 .nav-socials.is-visible, .mc-nav-socials {
@@ -97,7 +98,7 @@
 .nav-socials a, .mc-nav-socials a {
     text-decoration: none;
     color: var(--nav-bg);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 500;
     transition: color 0.2s;
 }
@@ -111,6 +112,11 @@
     color: var(--primary-color);
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
+}
+
+.nav-socials-ul, .mc-nav-socials-ul {
+    list-style: none;
+    padding: 0;
 }
 
 .btn-mc {
@@ -129,6 +135,11 @@
 
 .hamburger {
     cursor: pointer;
+}
+
+.fas {
+    margin-right: 10px; /* Adds space between the icon and text */
+    color: var(--nav-bg); /* Changes the icon color to green */
 }
 
 /* =========================================
@@ -189,6 +200,10 @@
 
     .nav-socials a, .mc-nav-socials a, .btn-mc, .nav-links a, .nav-logo {
         color: var(--primary-color);
+    }
+
+    .nav-socials a, .mc-nav-socials a {
+        font-size: 0.9rem;
     }
 
     .nav-links a:hover, .nav-socials a:hover, .mc-nav-socials a:hover, .btn-mc:hover  {
