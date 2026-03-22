@@ -181,6 +181,10 @@
         margin: 0;
     }
 
+    .nav-links a {
+        font-size: 1rem;
+    }
+
     .nav-socials, .mc-nav-socials {
         display: flex;
         flex-direction: row;
