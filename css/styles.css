@@ -8,6 +8,7 @@ html {
 :root {
     --bg-color: #f4f4f9;
     --nav-bg: #f8f9fa;
+    --ashen: #d8d9d9;
     --text-color: #444;
     --text-muted: #777;
     --card-bg: white;
@@ -23,6 +24,222 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+}
+
+/* --- Navigation Bar Styles --- */
+.nav-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 20px;
+}
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    z-index: 999;
+
+    /* The Hiding Mechanism */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+
+    /* The Animation properties */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s;
+}
+
+.sticky-nav.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.sticky-nav.scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: var(--primary-color);
+    backdrop-filter: blur(5px);
+}
+
+.nav-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+
+    flex-direction: column;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 70% 0 60%;
+    flex-direction: column;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--nav-bg);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--ashen);
+}
+
+/* --- Conditional Nav Socials --- */
+.nav-socials, .mc-nav-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.nav-socials.is-visible, .mc-nav-socials {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.nav-logo.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.nav-logo {
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--nav-bg);
+}
+
+.nav-socials a, .mc-nav-socials a, .btn-mc {
+    text-decoration: none;
+    color: var(--nav-bg);
+}
+
+.nav-socials a, .mc-nav-socials a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-socials a:hover, .mc-nav-socials a:hover, .btn-mc:hover {
+    color: var(--ashen);
+}
+
+.nav-socials .nav-resume-btn, .mc-nav-socials .nav-resume-btn {
+    background-color: var(--nav-bg);
+    color: var(--primary-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+.nav-socials .nav-resume-btn:hover, .mc-nav-socials .nav-resume-btn:hover {
+    background-color: var(--ashen);
+    color: white;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+/* =========================================
+   NAV BAR DESKTOP STYLES
+   ========================================= */
+@media screen and (min-width: 801px) {
+    .nav-wrapper {
+        padding: 0;
+        display: block;
+    }
+
+    .nav-wrapper img {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sticky-nav {
+        /* Reset Position & Size */
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 1rem 0;
+        background-color: var(--nav-bg);
+
+        /* Force visibility */
+        opacity: 1;
+        visibility: visible;
+
+        /* Destroy the animations so desktop doesn't glitch */
+        transform: none;
+        transition: none;
+    }
+
+    .nav-content {
+        max-width: 1000px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .nav-socials, .mc-nav-socials {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+
+    }
+
+    .nav-socials {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(15px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    }
+
+    .sticky-nav.scrolled {
+        background-color: rgba(248, 249, 250, 0.95);
+    }
+    .nav-socials a, .mc-nav-socials a, .btn-mc, .nav-links a, .nav-logo {
+        color: var(--primary-color);
+    }
+
+    .nav-links a:hover, .nav-socials a:hover, .mc-nav-socials a:hover, .btn-mc:hover  {
+        color: var(--hover-color);
+    }
+
+    .nav-socials .nav-resume-btn:hover, .mc-nav-socials .nav-resume-btn:hover {
+        background-color: var(--hover-color);
+        color: white;
+    }
+
+    .nav-socials .nav-resume-btn, .mc-nav-socials .nav-resume-btn {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    /*header*/
+    header.about-section {
+        padding: 2rem 1rem 1rem 1rem;
+    }
 }
 
 /* --- STANDARD PAGE HEADERS (For Project Info Pages) --- */
@@ -42,7 +259,7 @@ header:not(.about-section) h1 {
 /* --- ABOUT ME SECTION --- */
 header.about-section {
     background-color: transparent; 
-    padding: 5rem 1rem 1rem 1rem; 
+    padding: 0.5rem 1rem 1rem 1rem;
     text-align: center;
     max-width: 800px; 
     margin: 0 auto;
@@ -138,8 +355,8 @@ header.about-section li {
 
 .card {
     display: flex;
-    flex-direction: column; /* Stack vertically by default for mobile */
-    gap: 1.5rem; /* Slightly smaller gap for mobile */
+    flex-direction: column;
+    gap: 1.5rem;
     background-color: var(--card-bg);
     border-radius: 8px;
     padding: 2rem;
@@ -167,22 +384,20 @@ header.about-section li {
 }
 
 /* =========================================
-   DESKTOP STYLES (Only kicks in on screens wider than 800px)
+   PORTFOLIO CARD DESKTOP STYLES
    ========================================= */
 @media screen and (min-width: 801px) {
 
-    /* Change the layout to side-by-side */
     .card {
         flex-direction: row;
-        gap: 2rem; /* Bring back the wider gap for desktop */
+        gap: 2rem;
     }
 
-    /* Apply the alternating reverse rule ONLY on desktop */
+
     .card.reverse {
         flex-direction: row-reverse;
     }
 
-    /* Apply the width ratios ONLY on desktop */
     .card-content {
         flex: 1.5;
     }
@@ -230,6 +445,18 @@ header.about-section li {
     margin-top: 0;
 }
 
+.btn-mc {
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    padding: 8px;
+    flex: 1;
+    text-align: center;
+}
+
+.btn-mc:hover {
+    border: 2px solid var(--hover-color);
+}
+
 /* --- SECTION HEADERS --- */
 .section-title {
     font-family: "EB Garamond", serif;
@@ -250,7 +477,6 @@ header.about-section li {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* The starting state: hidden and pushed down 30px */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -258,127 +484,11 @@ header.about-section li {
     will-change: opacity, transform; 
 }
 
-/* The ending state: fully visible and in original position */
 .fade-in.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* --- Navigation Bar Styles --- */
-.sticky-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: var(--nav-bg);
-    padding: 1rem 0;
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-/* The dynamic shadow class */
-.sticky-nav.scrolled {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    background-color: rgba(248, 249, 250, 0.95); 
-    backdrop-filter: blur(5px);
-}
-
-.nav-content {
-    max-width: 1000px; 
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-.nav-links a:hover {
-    color: var(--hover-color);
-}
-
-/* --- Conditional Nav Socials --- */
-.nav-socials, .mc-nav-socials {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    opacity: 0; 
-    visibility: hidden;
-    transform: translateX(15px); 
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-}
-
-.nav-socials.is-visible, .mc-nav-socials {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-}
-
-.nav-logo.is-visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-}
-
-.nav-logo {
-    font-family: "Times New Roman", serif;
-    font-weight: bold;
-    font-size: 1.3rem;
-    color: var(--primary-color); 
-}
-
-.btn-mc {
-    border: 2px solid var(--primary-color);
-    border-radius: 25px;
-    padding: 8px;
-    flex: 1;
-    text-align: center;
-}
-
-.btn-mc:hover {
-    border: 2px solid var(--hover-color);
-}
-
-.nav-socials a, .mc-nav-socials a, .btn-mc {
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
-.nav-socials a, .mc-nav-socials a {
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-.nav-socials a:hover, .mc-nav-socials a:hover, .btn-mc:hover {
-    color: var(--hover-color);
-}
-
-.nav-socials .nav-resume-btn, .mc-nav-socials .nav-resume-btn {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-}
-
-.nav-socials .nav-resume-btn:hover, .mc-nav-socials .nav-resume-btn:hover {
-    background-color: var(--hover-color);
-    color: white;
-}
-
-/* --- Skills Section Styles --- */
 .skills-section {
     max-width: 1000px;
     margin: 4rem auto;
@@ -388,7 +498,7 @@ header.about-section li {
 .skills-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .skills-column {
@@ -417,23 +527,18 @@ header.about-section li {
 }
 
 /* =========================================
-   DESKTOP STYLES (Only kicks in on screens wider than 800px)
+   SKILLS DESKTOP STYLES
    ========================================= */
 @media screen and (min-width: 801px) {
-
-    /* Change the layout to side-by-side */
     .skills-container {
         flex-direction: row;
-        gap: 2rem; /* Bring back the wider gap for desktop */
+        gap: 2rem;
     }
 
-    /* Apply the width ratios ONLY on desktop */
     .skills-column {
-        flex: 1.5;
+        flex: 1;
     }
 }
-
-
 
 /* --- Contact Footer --- */
 .contact-footer {
