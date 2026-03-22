@@ -126,7 +126,7 @@ body {
     color: var(--nav-bg);
 }
 
-.nav-socials a, .mc-nav-socials a, .btn-mc {
+.nav-socials a, .mc-nav-socials a {
     text-decoration: none;
     color: var(--nav-bg);
 }
@@ -137,7 +137,7 @@ body {
     transition: color 0.2s;
 }
 
-.nav-socials a:hover, .mc-nav-socials a:hover, .btn-mc:hover {
+.nav-socials a:hover, .mc-nav-socials a:hover {
     color: var(--ashen);
 }
 
@@ -146,6 +146,15 @@ body {
     color: var(--primary-color);
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
+}
+
+.btn-mc {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.btn-mc:hover {
+    color: var(--hover-color);
 }
 
 .nav-socials .nav-resume-btn:hover, .mc-nav-socials .nav-resume-btn:hover {
