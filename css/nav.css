@@ -42,7 +42,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 20px;
+    padding: 0;
     flex-direction: column;
 }
 
@@ -59,6 +59,7 @@
     text-decoration: none;
     color: var(--nav-bg);
     font-weight: 500;
+    font-size: 1.2rem;
     transition: color 0.2s;
 }
 
@@ -91,7 +92,7 @@
 .nav-logo {
     font-family: "Times New Roman", serif;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: var(--nav-bg);
 }
 
