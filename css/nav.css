@@ -15,7 +15,7 @@
     width: 50vw;
     height: 100vh;
     background-color: var(--primary-color);
-    padding: 2rem;
+    padding: 1rem;
     z-index: 999;
 
     opacity: 0;
