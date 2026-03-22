@@ -67,14 +67,6 @@
     color: var(--ashen);
 }
 
-.nav-links li {
-    border-radius: 10px;
-    border: 2px solid #072331;
-    /*top right bottom left*/
-    padding: 2px 13px 2px 5px;
-    background-color: #092D3F;
-}
-
 /* --- Conditional Nav Socials --- */
 .nav-socials, .mc-nav-socials {
     display: flex;
@@ -231,11 +223,5 @@
     .nav-socials .nav-resume-btn, .mc-nav-socials .nav-resume-btn {
         background-color: var(--primary-color);
         color: white;
-    }
-
-    .nav-links li {
-        border: none;
-        padding: 0;
-        background-color: transparent;
     }
 }
