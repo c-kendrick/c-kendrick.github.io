@@ -12,7 +12,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 50vw;
+    width: 55vw;
     height: 100vh;
     background-color: var(--primary-color);
     padding: 1rem;
@@ -44,6 +44,7 @@
     align-items: flex-start;
     padding: 0;
     flex-direction: column;
+    height: 100%;
 }
 
 .nav-links {
@@ -51,7 +52,7 @@
     display: flex;
     gap: 2rem;
     padding: 0;
-    margin: 70% 0 60%;
+    margin-top: 20vh;
     flex-direction: column;
 }
 
@@ -75,6 +76,8 @@
     align-items: flex-start;
     justify-content: space-between;
 
+    margin-top: auto;
+    margin-bottom: 20vh;
 }
 
 .nav-socials.is-visible, .mc-nav-socials {
@@ -146,7 +149,7 @@
 /* =========================================
    NAV BAR DESKTOP STYLES
    ========================================= */
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 1050px) {
     .nav-wrapper {
         padding: 0;
         display: block;
@@ -174,6 +177,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        height: auto;
     }
 
     .nav-links {
@@ -190,6 +194,8 @@
         flex-direction: row;
         gap: 1rem;
         align-items: center;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .nav-socials {
@@ -223,5 +229,14 @@
     .nav-socials .nav-resume-btn, .mc-nav-socials .nav-resume-btn {
         background-color: var(--primary-color);
         color: white;
+    }
+}
+
+/* =========================================
+   NAV BAR TABLET STYLES
+   ========================================= */
+@media screen and (min-width: 768px) and (max-width: 1049px) {
+    .sticky-nav {
+        width: 31vw;
     }
 }
