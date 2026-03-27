@@ -74,6 +74,35 @@
 
 <div id="portfolio">
     <h2 class="section-title">Portfolio</h2>
+
+    <div class="card fade-in">
+        <div class="card-content">
+            <h2 class="mini-title">Headless Portfolio API</h2>
+            <div>
+                <span class="tag">Java & Spring Boot</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Docker</span>
+                <span class="tag">REST API</span>
+            </div>
+            <p><strong>Overview:</strong> A full-stack web app that uses a REST API and database to separate backend data from the frontend.</p>
+            <p><strong>Technical Decisions:</strong> Built a Spring Boot backend with APIs to manage and organise project data. Stored data in PostgreSQL using JPA, with the database running in Docker. Built a simple frontend that fetches data from the API and displays it. Enabled frontend-backend communication using CORS.</p>
+            <div class="button-group">
+                <a href="https://github.com/c-kendrick/spring-portfolio-frontend" class="btn" target="_blank" rel="noopener noreferrer">
+                    <span class="text-desktop">Backend Source Code</span>
+                    <span class="text-mobile">Backend Code</span>
+                </a>
+                <a href="https://github.com/c-kendrick/Spring-portfolio-backend" class="btn" target="_blank" rel="noopener noreferrer">
+                    <span class="text-desktop">Frontend Source Code</span>
+                    <span class="text-mobile">Frontend Code</span>
+                </a>
+            </div>
+        </div>
+        <div class="card-image-wrapper">
+            <img src="images/json.png" alt="Headless Portfolio API">
+        </div>
+    </div>
+
+
     <div class="card reverse fade-in">
         <div class="card-content">
             <h2 class="mini-title">Minecraft Java Plugins</h2>
@@ -84,16 +113,15 @@
                 <span class="tag">RBAC</span>
             </div>
 
-            <p><strong>Overview:</strong> Developed custom Java applications for a live server, supporting 200+
-                lifetime users and 1,000+ total downloads. </p>
+            <p><strong>Overview:</strong> Built custom backend systems for a live server used by 200+ players with 1,000+ downloads. </p>
 
             <p><strong>Technical Decisions:</strong></p>
             <ul>
-                <li><strong>API Ecosystem:</strong> Integrated third-party APIs to manage economy states, entity routing, and region permissions.
+                <li><strong>API Ecosystem:</strong> Integrated third-party APIs to handle in-game economy, entity behaviour, and region permissions.
                 </li>
-                <li><strong>Spatial Data:</strong> Leveraged the WorldEdit API for large-scale spatial data manipulation and weighted block generation.
+                <li><strong>Spatial Data:</strong> Used the WorldEdit API to modify large map regions and control block generation.
                 </li>
-                <li><strong>Access Control:</strong> Implemented a custom RBAC gateway to validate user privileges before executing critical backend operations.</li>
+                <li><strong>Access Control:</strong> Built a role-based access system to control player permissions for backend actions.</li>
             </ul>
 
             <div class="button-group">
@@ -114,12 +142,9 @@
                 <span class="tag">Chart.js</span>
                 <span class="tag">State Management</span>
             </div>
-            <p><strong>Overview:</strong> An offline-first financial dashboard that processes and visualises user
-                income, expenses, and savings metrics in real-time.
+            <p><strong>Overview:</strong> A financial dashboard that works offline and tracks income, expenses, and savings in real time.
             </p>
-            <p><strong>Technical Decisions:</strong> Built in vanilla ES6 JavaScript to handle DOM
-                manipulation and state management. Utilised the browser's native Web Storage API for secure,
-                client-side data persistence, and integrated Chart.js for dynamic data visualisation.
+            <p><strong>Technical Decisions:</strong> Built with vanilla JavaScript to manage UI and application state. Stored data locally in the browser to keep financial data secure and for fast load times. Used Chart.js to display it.
             </p>
             <div class="button-group">
                 <a href="https://github.com/c-kendrick/finance-tool" class="btn" target="_blank" rel="noopener noreferrer">
@@ -144,11 +169,9 @@
                 <span class="tag">OOP Architecture</span>
                 <span class="tag">File I/O</span>
             </div>
-            <p><strong>Overview:</strong> A Java command-line application that implements scalable Object-Oriented Programming (OOP) architecture
-                algorithmic logic, and data persistence.</p>
-            <p><strong>Technical Decisions:</strong> Engineered an extensible class hierarchy using inheritance
-                and polymorphism. Implemented recursive data structures for uniform object processing and utilised
-                CSV I/O for state tracking. Integrated comprehensive JUnit testing across all core game logic to ensure system stability.
+            <p><strong>Overview:</strong> A Java command-line game built using object-oriented design, algorithms, and local data storage.</p>
+            <p><strong>Technical Decisions:</strong> Built an extensible class structure using inheritance and polymorphism. Used recursion to process game objects consistently and stored game state using CSV files.
+                added JUnit tests for core game logic to ensure reliability.
             </p>
             <div class="button-group">
                 <a href="https://github.com/c-kendrick/COMP1010" class="btn" target="_blank" rel="noopener noreferrer">
@@ -163,38 +186,6 @@
         </div>
         <div class="card-image-wrapper">
             <img src="images/dungeons.png" alt="Dungeons Console Gameplay">
-        </div>
-    </div>
-
-    <div class="card fade-in">
-        <div class="card-content">
-            <h2 class="mini-title">Counter Knights: Arcane Offensive</h2>
-            <div>
-                <span class="tag">WebGL & Unity</span>
-                <span class="tag">Visual Scripting Nodes</span>
-                <span class="tag">Raycasting</span>
-                <span class="tag">State Machines</span>
-            </div>
-            <p><strong>Overview:</strong> A WebGL Unity application implementing deterministic state management,
-                AI routing, and algorithmic physics calculations.</p>
-            <p><strong>Technical Decisions:</strong> Developed AI state machines driven by ray-casting for
-                line-of-sight detection. Engineered a dynamic recoil and combat system using real-time
-                vector maths and time-decay algorithms.
-            </p>
-            <div class="button-group">
-                <a href="https://github.com/c-kendrick/counter-knights/" class="btn" target="_blank" rel="noopener noreferrer">
-                    <span class="text-desktop">Project Info & Source Code</span>
-                    <span class="text-mobile">Info & Code</span>
-                </a>
-                <a href="https://ckendrick-mqu.itch.io/counter-knights-arcane-offensive" class="btn" target="_blank"
-                   rel="noopener noreferrer">
-                    <span class="text-desktop">Play in Browser</span>
-                    <span class="text-mobile">Play Online</span>
-                </a>
-            </div>
-        </div>
-        <div class="card-image-wrapper">
-            <img src="images/knights.png" alt="Counter Knights Gameplay">
         </div>
     </div>
 
